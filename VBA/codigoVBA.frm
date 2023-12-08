@@ -91,12 +91,23 @@ Private Sub buttonCadastrar_Click()
     If comboMidia = "Fisica" Then
     
         If Not IsNumeric(TextEstoque.Text) Then
-             MsgBox "Favor preencher o campo Correntamente"
-             TextEstoque.BackColor = &HFF&
-             Exit Sub
+        
+            MsgBox "Favor preencher o campo Correntamente"
+            TextEstoque.BackColor = &HFF&
+        
+            
+        End If
+            
+        If TextEstoque.Value < 1 Then
+            
+                MsgBox "Favor preencher o campo Correntamente"
+                TextEstoque.BackColor = &HFF&
+            
+        Exit Sub
         End If
 
     End If
+    
     
     
     
@@ -151,7 +162,14 @@ Private Sub buttonCadastrar_Click()
      PlanProdutos.Cells(linha, 9).Value = preco
      PlanProdutos.Cells(linha, 10).Value = genero
      PlanProdutos.Cells(linha, 11).Value = dev
-     PlanProdutos.Cells(linha, 12).Value = estoque
+     
+     If estoque = 0 Then
+        PlanProdutos.Cells(linha, 12).Value = "NULL"
+     End If
+     If estoque > 0 Then
+        PlanProdutos.Cells(linha, 12).Value = estoque
+     End If
+     
      PlanProdutos.Cells(linha, 13).Value = plataforma
      
      '7. mudar a numeracao da linha
@@ -303,6 +321,7 @@ If comboMidia.Value = "Digital" Then
 
     TextEstoque.BackColor = &HE0E0E0
     TextEstoque.Enabled = False
+    TextEstoque.Value = ""
 
     
 
