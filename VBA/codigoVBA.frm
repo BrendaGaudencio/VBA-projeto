@@ -28,24 +28,24 @@ Private Sub buttonCadastrar_Click()
     
     '2. inspecionar os preenchimentos e colocar vermelho
     If Not IsNumeric(textCodigo.Text) Then
-        MsgBox "Favor preencher corretamente o campo código"
+        MsgBox "Favor preencher corretamente o campo cÃ³digo"
         Exit Sub
     End If
     
     If textNome.Text = "" Then
-        MsgBox "Favor preencher o campo Descrição"
+        MsgBox "Favor preencher o campo DescriÃ§Ã£o"
         textNome.BackColor = &HFF&
         Exit Sub
     End If
     
     If comboCategoria.Text = "" Then
-        MsgBox "Favor preencher o campo Descrição"
+        MsgBox "Favor preencher o campo DescriÃ§Ã£o"
         comboCategoria.BackColor = &HFF&
         Exit Sub
     End If
     
     If comboMidia.Text = "" Then
-        MsgBox "Favor preencher o campo Descrição"
+        MsgBox "Favor preencher o campo DescriÃ§Ã£o"
         comboMidia.BackColor = &HFF&
         Exit Sub
     End If
@@ -57,14 +57,14 @@ Private Sub buttonCadastrar_Click()
     End If
     
     If comboClassif.Text = "" Then
-        MsgBox "Favor preencher o campo Descrição"
+        MsgBox "Favor preencher o campo DescriÃ§Ã£o"
         comboClassif.BackColor = &HFF&
         Exit Sub
     End If
     
     
     If textDesc.Text = "" Then
-        MsgBox "Favor preencher o campo Descrição"
+        MsgBox "Favor preencher o campo DescriÃ§Ã£o"
         textDesc.BackColor = &HFF&
         Exit Sub
     End If
@@ -151,7 +151,7 @@ Private Sub buttonCadastrar_Click()
      linha = planControle.Range("A2").Value
      'linha = linha + 1
      
-     '6. passar os dados das variáveis para a planilha de produtos
+     '6. passar os dados das variÃ¡veis para a planilha de produtos
      PlanProdutos.Cells(linha, 2).Value = codigo
      PlanProdutos.Cells(linha, 3).Value = nome
      PlanProdutos.Cells(linha, 4).Value = categoria
@@ -240,7 +240,7 @@ End Sub
 
 Private Sub comboCategoria_Change()
     
-    'Um Switch para alterar a lista genero de cordo com opcão campo categoria
+    'Um Switch para alterar a lista genero de cordo com opcÃ£o campo categoria
     
     comboGen.Enabled = True
     
@@ -252,27 +252,27 @@ Private Sub comboCategoria_Change()
       Case "RPG" '
         
         comboGen.Clear
-        comboGen.AddItem "RPG de Ação"
+        comboGen.AddItem "RPG de AÃ§Ã£o"
         comboGen.AddItem "MMORPG"
         comboGen.AddItem "Rouguelikes"
-        primeiroValor = "RPG de Ação"
+        primeiroValor = "RPG de AÃ§Ã£o"
         
-      Case "AçãoAventura"
+      Case "AÃ§Ã£oAventura"
         
         comboGen.Clear
-        comboGen.AddItem "Horror e Sobrevivência"
+        comboGen.AddItem "Horror e SobrevivÃªncia"
         comboGen.AddItem "Metroidvania"
         comboGen.AddItem "FPS"
-        primeiroValor = "Horror e Sobrevivência"
+        primeiroValor = "Horror e SobrevivÃªncia"
         
-      Case "Simulação"
+      Case "SimulaÃ§Ã£o"
       
         comboGen.Clear
-        comboGen.AddItem "Construção"
-        comboGen.AddItem "Gestão"
+        comboGen.AddItem "ConstruÃ§Ã£o"
+        comboGen.AddItem "GestÃ£o"
         comboGen.AddItem "Vida"
-        comboGen.AddItem "Veículos"
-        primeiroValor = "Construção"
+        comboGen.AddItem "VeÃ­culos"
+        primeiroValor = "ConstruÃ§Ã£o"
         
       Case "Esportes"
       
@@ -284,7 +284,7 @@ Private Sub comboCategoria_Change()
         comboGen.AddItem "Corrida"
         primeiroValor = "Futebol"
                
-      Case "Estratégia"
+      Case "EstratÃ©gia"
       
             
         comboGen.Clear
@@ -333,12 +333,12 @@ End Sub
 
 Private Sub UserForm_Activate()
 
-    'criando as lista dos combos do coampo cadastro
+    'criando as lista dos combos do campo de cadastro
     comboCategoria.AddItem "RPG"
-    comboCategoria.AddItem "AçãoAventura"
-    comboCategoria.AddItem "Simulação"
+    comboCategoria.AddItem "AÃ§Ã£oAventura"
+    comboCategoria.AddItem "SimulaÃ§Ã£o"
     comboCategoria.AddItem "Esportes"
-    comboCategoria.AddItem "Estratégia"
+    comboCategoria.AddItem "EstratÃ©gia"
 
     
     
@@ -355,8 +355,8 @@ Private Sub UserForm_Activate()
     comboPlataform.AddItem "PC"
     comboPlataform.AddItem "Xbox Series X"
     comboPlataform.AddItem "Xbox One"
-    comboPlataform.AddItem "playstation 5"
     comboPlataform.AddItem "playstation 4"
+    comboPlataform.AddItem "playstation 5"
     comboPlataform.AddItem "Nintendo Switch"
     comboPlataform.AddItem "Nintendo Wii U"
     comboPlataform.AddItem "Nintendo 3DS"
