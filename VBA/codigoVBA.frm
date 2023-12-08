@@ -5,7 +5,7 @@ Begin {C62A69F0-16DC-11CE-9E98-00AA00574A4F} FormProdutos
    ClientLeft      =   -165
    ClientTop       =   -585
    ClientWidth     =   8730.001
-   OleObjectBlob   =   "FormProdutos02.frx":0000
+   OleObjectBlob   =   "codigoVBA.frx":0000
    StartUpPosition =   1  'CenterOwner
 End
 Attribute VB_Name = "FormProdutos"
