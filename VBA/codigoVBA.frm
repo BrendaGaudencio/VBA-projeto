@@ -51,7 +51,7 @@ Private Sub buttonCadastrar_Click()
     End If
     
     If Not IsNumeric(textAno.Text) Then
-        MsgBox "Favor preencher o campo Correntamente"
+        MsgBox "Favor preencher o campo Corretamente"
         textAno.BackColor = &HFF&
         Exit Sub
     End If
@@ -70,7 +70,7 @@ Private Sub buttonCadastrar_Click()
     End If
     
     If Not IsNumeric(textPreco.Text) Then
-       MsgBox "Favor preencher o campo Correntamente"
+       MsgBox "Favor preencher o campo Corretamente"
        textPreco.BackColor = &HFF&
         Exit Sub
     End If
@@ -92,7 +92,7 @@ Private Sub buttonCadastrar_Click()
     
         If Not IsNumeric(TextEstoque.Text) Then
         
-            MsgBox "Favor preencher o campo Correntamente"
+            MsgBox "Favor preencher o campo Corretamente"
             TextEstoque.BackColor = &HFF&
         
             
@@ -100,7 +100,7 @@ Private Sub buttonCadastrar_Click()
             
         If TextEstoque.Value < 1 Then
             
-                MsgBox "Favor preencher o campo Correntamente"
+                MsgBox "Favor preencher o campo Corretamente"
                 TextEstoque.BackColor = &HFF&
             
         Exit Sub
